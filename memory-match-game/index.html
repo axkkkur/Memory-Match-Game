@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match - Card Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Game Header -->
+        <header class="game-header">
+            <h1>Memory Match</h1>
+            <div class="game-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Moves:</span>
+                    <span id="moves-count">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Time:</span>
+                    <span id="time-display">00:00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Best:</span>
+                    <span id="best-score">--</span>
+                </div>
+            </div>
+            <div class="game-controls">
+                <button id="pause-btn" class="btn btn--secondary">⏸️ Pause</button>
+                <button id="restart-btn" class="btn btn--outline">🔄 Restart</button>
+            </div>
+        </header>
+
+        <!-- Difficulty Selection Screen -->
+        <div id="difficulty-screen" class="game-screen active">
+            <div class="difficulty-container">
+                <h2>Choose Your Challenge</h2>
+                <div class="difficulty-options">
+                    <button class="difficulty-btn" data-difficulty="easy">
+                        <div class="difficulty-title">Easy</div>
+                        <div class="difficulty-grid">4×4 Grid</div>
+                        <div class="difficulty-desc">Perfect for beginners</div>
+                    </button>
+                    <button class="difficulty-btn" data-difficulty="medium">
+                        <div class="difficulty-title">Medium</div>
+                        <div class="difficulty-grid">4×6 Grid</div>
+                        <div class="difficulty-desc">Moderate challenge</div>
+                    </button>
+                    <button class="difficulty-btn" data-difficulty="hard">
+                        <div class="difficulty-title">Hard</div>
+                        <div class="difficulty-grid">6×6 Grid</div>
+                        <div class="difficulty-desc">Ultimate test</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="game-screen">
+            <div class="game-info">
+                <div class="difficulty-indicator">
+                    <span class="difficulty-label">Difficulty:</span>
+                    <span id="current-difficulty">Easy</span>
+                </div>
+                <div id="game-message" class="game-message"></div>
+            </div>
+            <div id="game-board" class="game-board"></div>
+        </div>
+
+        <!-- Win Screen -->
+        <div id="win-screen" class="game-screen">
+            <div class="win-container">
+                <div class="celebration">🎉</div>
+                <h2>Congratulations!</h2>
+                <div class="win-stats">
+                    <div class="win-stat">
+                        <span class="win-label">Final Moves:</span>
+                        <span id="final-moves">0</span>
+                    </div>
+                    <div class="win-stat">
+                        <span class="win-label">Final Time:</span>
+                        <span id="final-time">00:00</span>
+                    </div>
+                    <div class="win-stat">
+                        <span class="win-label">Difficulty:</span>
+                        <span id="final-difficulty">Easy</span>
+                    </div>
+                    <div id="new-record" class="new-record">🏆 New Best Score!</div>
+                </div>
+                <div class="win-actions">
+                    <button id="play-again-btn" class="btn btn--primary">Play Again</button>
+                    <button id="change-difficulty-btn" class="btn btn--secondary">Change Difficulty</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pause Overlay -->
+        <div id="pause-overlay" class="pause-overlay">
+            <div class="pause-content">
+                <h2>Game Paused</h2>
+                <p>Take a break! Click resume when you're ready.</p>
+                <button id="resume-btn" class="btn btn--primary">▶️ Resume</button>
+                <button id="quit-btn" class="btn btn--outline">Quit Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

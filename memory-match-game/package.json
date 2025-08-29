@@ -1,0 +1,31 @@
+{
+  "name": "memory-match-game",
+  "version": "1.0.0",
+  "description": "A responsive browser-based memory card matching game",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "dev": "live-server --port=3000 --open",
+    "build": "echo 'No build step required for vanilla JS'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "memory-game",
+    "card-game",
+    "javascript",
+    "html5",
+    "css3",
+    "responsive",
+    "browser-game"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "your-github-repo-url"
+  },
+  "homepage": "your-demo-url"
+}
